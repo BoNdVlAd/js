@@ -31,3 +31,12 @@ Cума всіх товарів, парне число: ${even} \n
 } - ${Math.floor(sum - priceAfterDiscount)} -> ${profit}
 Чистий прибуток: ${profit}
 `);
+console.log(
+  `Максимальна ціна: ${max} Мінімальна ціна: ${min} Вартість всіх товарів: ${sum} Вартість всіх товарів без копійок: ${sumInt} Сума всіх товарів, округлена до сотень: ${hundreds} Cума всіх товарів, парне число: ${even} Сума решти: ${rest}грн Середнє значення: ${average} Ваша знижка: ${discount}%, тому до сплати: ${priceAfterDiscount} Ціна була ${sum.toFixed(
+    2,
+  )}, знижка склала ${discount}%, клієнт заплатив на ${Math.floor(
+    sum - priceAfterDiscount,
+  )} меньше, собівартість = ${Math.floor(sum)} / 2 -> ${Math.floor(sum) / 2}. Чистий прибуток = ${
+    Math.floor(sum) / 2
+  } - ${Math.floor(sum - priceAfterDiscount)} -> ${profit} Чистий прибуток: ${profit}`,
+);
