@@ -26,8 +26,8 @@ Cума всіх товарів, парне число: ${even} \n
 Ваша знижка: ${discount}%, тому до сплати: ${priceAfterDiscount} \n
 Ціна була ${sum.toFixed(2)}, знижка склала ${discount}%, клієнт заплатив на ${Math.floor(
   sum - priceAfterDiscount,
-)} меньше, собівартість = ${Math.round(sum)} / 2 -> ${Math.floor(sum) / 2}. Чистий прибуток = ${
+)} меньше, собівартість = ${Math.floor(sum)} / 2 -> ${Math.floor(sum) / 2}. Чистий прибуток = ${
   Math.floor(sum) / 2
-} - ${Math.floor(sum - priceAfterDiscount)} -> ${profit})
+} - ${Math.floor(sum - priceAfterDiscount)} -> ${profit}
 Чистий прибуток: ${profit}
 `);
