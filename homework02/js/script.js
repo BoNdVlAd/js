@@ -1,22 +1,18 @@
 let sum = 0;
+let N;
+let M;
 
-let N = Number(prompt('N:').trim());
-if (isNaN(N) || N % 1 !== 0) {
-  while (true) {
-    N = Number(prompt('N має бути цілим числом!\nВведіть N ще раз: '));
-    if (!isNaN(N) && N % 1 === 0) {
-      break;
-    }
+while (true) {
+  N = Number(prompt('N має бути цілим числом!\nN має бути більшим за 0\nВведіть N: ').trim());
+  if (!isNaN(N) && N % 1 === 0 && N > 0) {
+    break;
   }
 }
 
-let M = Number(prompt('M:').trim());
-if (isNaN(M) || M % 1 !== 0) {
-  while (true) {
-    M = Number(prompt('M має бути цілим числом!\nВведіть M ще раз: '));
-    if (!isNaN(M) && M % 1 === 0) {
-      break;
-    }
+while (true) {
+  M = Number(prompt('M має бути цілим числом!\nM має бути більшим за N\nВведіть M: ').trim());
+  if (!isNaN(M) && M % 1 === 0 && M > N) {
+    break;
   }
 }
 
