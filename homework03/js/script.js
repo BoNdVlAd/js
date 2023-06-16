@@ -13,6 +13,7 @@ const powNumber = (number, degree) => {
   }
   return result;
 };
+
 const formatName = (name) => {
   let strName = name.split('');
   strName[0] = strName[0].toUpperCase();
@@ -84,17 +85,38 @@ const deleteDuplicateLetter = (sentence) => {
       }
     }
   }
-  return arr;
+  return arr.join('');
 };
 
-console.log(getMaxDigit(1236));
-console.log(powNumber(2, 4));
-console.log(formatName('vlad'));
-console.log(salaryAfterTax(1000, 19.5));
-console.log(getRandomNumber(1, 10));
-console.log(countLetter('а', 'Асталавіста'));
-console.log(convertCurrency('3600U'));
-console.log(getRandomPassword(8));
-console.log(deleteLetters('a', 'blablabla'));
-console.log(isPalyndrom('Я несу гусеня'));
-console.log(deleteDuplicateLetter('Бісквіт був дуже ніжним'));
+console.log(`Функція №1(найбільша цифра(1236)): ${getMaxDigit(1236)}`);
+console.log(`Функція №2(ступінь(2 у 4 степені)): ${powNumber(2, 4)}`);
+console.log(`Функція №3(робить першу букву великою(vlad)): ${formatName('vlad')}`);
+console.log(
+  `Функція №4(зарплата після оплати податку(salary:1000; tax:19.5%)): ${salaryAfterTax(
+    1000,
+    19.5,
+  )}`,
+);
+console.log(`Функція №5(випадкове число у межах(1-10)): ${getRandomNumber(1, 10)}`);
+console.log(
+  `Функція №6(скільки разів буква повторюється в слові(\'а\' у слові \'Асталавіста\')): ${countLetter(
+    'а',
+    'Асталавіста',
+  )}`,
+);
+console.log(`Функція №7,8(конвертює валюту(3600uah)): ${convertCurrency('3600uah')}`);
+console.log(`Функція №9(створює випадковий пароль(довжина = 8)): ${getRandomPassword(8)}`);
+console.log(
+  `Функція №10(видаляє всі букви(букву \'a\' у слові \'blablabla\')): ${deleteLetters(
+    'a',
+    'blablabla',
+  )}`,
+);
+console.log(
+  `Функція №11(перевіряє, чи є слово паліндромом(Я несу гусеня)): ${isPalyndrom('Я несу гусеня')}`,
+);
+console.log(
+  `Функція №12(видаляє з речення букви, що повторюються(Бісквіт був дуже ніжним)): ${deleteDuplicateLetter(
+    'Бісквіт був дуже ніжним',
+  )}`,
+);
