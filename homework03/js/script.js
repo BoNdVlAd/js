@@ -16,6 +16,7 @@ const powNumber = (number, degree) => {
 
 const formatName = (name) => {
   let strName = name.split('');
+  strName = strName.map(e=>e.toLowerCase())
   strName[0] = strName[0].toUpperCase();
   strName = strName.join('');
   return strName;
@@ -25,7 +26,8 @@ const salaryAfterTax = (salary, tax) => {
 };
 
 const getRandomNumber = (N, M) => {
-  return Math.floor(Math.random() * (M - N) + N);
+  M += 1
+  return Math.floor(Math.random() * (M - N)) + N
 };
 
 const countLetter = (letter, word) => {
@@ -90,14 +92,14 @@ const deleteDuplicateLetter = (sentence) => {
 
 console.log(`Функція №1(найбільша цифра(1236)): ${getMaxDigit(1236)}`);
 console.log(`Функція №2(ступінь(2 у 4 степені)): ${powNumber(2, 4)}`);
-console.log(`Функція №3(робить першу букву великою(vlad)): ${formatName('vlad')}`);
+console.log(`Функція №3(робить першу букву великою(vLAD)): ${formatName('vLAD')}`);
 console.log(
   `Функція №4(зарплата після оплати податку(salary:1000; tax:19.5%)): ${salaryAfterTax(
     1000,
     19.5,
   )}`,
 );
-console.log(`Функція №5(випадкове число у межах(1-10)): ${getRandomNumber(1, 10)}`);
+console.log(`Функція №5(випадкове число у межах(9-10)): ${getRandomNumber(9, 10)}`);
 console.log(
   `Функція №6(скільки разів буква повторюється в слові(\'а\' у слові \'Асталавіста\')): ${countLetter(
     'а',
