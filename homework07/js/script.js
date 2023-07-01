@@ -17,7 +17,7 @@ function getTotalTaxes(){
   return totalTax
 }
 
-function getMySalary(){
+function getMySalary(...args){
   setInterval(() => {
   const obj = {
     salary: Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500,
@@ -29,6 +29,17 @@ function getMySalary(){
 }
 
 console.log('1) рахує скільки податків ви заплатите як IT-спеціаліст в Україні (1000) : ', getMyTaxes.call(ukraine, 1000))
+console.log('1) рахує скільки податків ви заплатите як IT-спеціаліст в Латвії (1000) : ', getMyTaxes.call(latvia, 1000))
+console.log('1) рахує скільки податків ви заплатите як IT-спеціаліст в Литві (1000) : ', getMyTaxes.call(litva, 1000))
+
 console.log('2) рахує скільки у середньому податків платять IT-спеціалісти в Україні', getMiddleTaxes.call(ukraine))
-console.log('3) яка рахує, скільки всього податків платять IT-спеціалісти в Україні', getTotalTaxes.call(ukraine))
+console.log('2) рахує скільки у середньому податків платять IT-спеціалісти в Латвії', getMiddleTaxes.call(latvia))
+console.log('2) рахує скільки у середньому податків платять IT-спеціалісти в Литві', getMiddleTaxes.call(litva))
+
+console.log('3) рахує, скільки всього податків платять IT-спеціалісти в Україні', getTotalTaxes.call(ukraine))
+console.log('3) рахує, скільки всього податків платять IT-спеціалісти в Латвії', getTotalTaxes.call(latvia))
+console.log('3) рахує, скільки всього податків платять IT-спеціалісти в Литві', getTotalTaxes.call(litva))
+
 getMySalary.call(ukraine)
+getMySalary.call(latvia)
+getMySalary.call(litva)
