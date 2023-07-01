@@ -17,7 +17,7 @@ function getTotalTaxes(){
   return totalTax
 }
 
-function getMySalary(...args){
+function getMySalary(){
   setInterval(() => {
   const obj = {
     salary: Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500,
