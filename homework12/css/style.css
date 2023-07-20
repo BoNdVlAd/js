@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'StarWars';
+  src: URL('../assets/fonts/starjedi/Starjhol.ttf') format('truetype');
+}
+li{
+  list-style: none;
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url('../assets/sw_bg.jpeg');
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  height: 100vh;
+  color: yellow;
+  font-family: 'StarWars', sans-serif;
+  letter-spacing: 4px;
+}
+
+.title{
+  text-align: center;
+  font-size: 72px;
+  letter-spacing: 10px;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80vh;
+  
+}
+
+.wrapper{
+  min-height: 100%;
+  border-radius: 20px;
+  background-color: transparent;
+  box-shadow: 10px 5px 30px #838F7E;
+  padding: 10px 30px;
+  /* perspective: 200px; */
+  backdrop-filter: blur(15px);
+  
+}
+
+.search{
+  /* transform: rotateX(7deg); */
+}
+
+.yellow__btn{
+  background-color: transparent;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  padding: 5px;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.yellow__btn:hover{
+  background-color: yellow;
+  color: #000
+}
+
+.items{
+  margin: 0 auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(1, 1fr);
+}
+.item{
+  border: 1px solid yellow;
+  padding: 5px;
+  height: 400px;
+  
+}
+
+.info__img{
+  max-width: 185px;
+  
+}
