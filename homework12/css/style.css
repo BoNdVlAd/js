@@ -73,19 +73,25 @@ body{
 
 .items{
   margin: 0 auto;
-  width: 1000px;
+  width: 1080px;
   display: grid;
   grid-template-columns: repeat(5, 200px);
   grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
 }
 .item{
   border: 1px solid yellow;
   padding: 5px;
   height: 400px;
+  display: grid;
+  grid-template-rows: 185px auto;
+  border-radius: 20px;
   
 }
 
 .info__img{
+  display: block;
   max-width: 185px;
-  
+  max-height: 185px;
+  margin: 0px auto;
 }

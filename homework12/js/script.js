@@ -1,3 +1,20 @@
+const charactersImages = {
+  'Luke Skywalker': './assets/imgs/Skywalker.jpg',
+  'C-3PO': './assets/imgs/C-3PO.jpeg',
+  'R2-D2': './assets/imgs/R2-D2.webp',
+  'Darth Vader': './assets/imgs/Darth-Vader.jpg',
+  'Leia Organa': './assets/imgs/Leia-Organa.webp',
+  'Owen Lars':'./assets/imgs/Owen-Lars.jpeg',
+  'Beru Whitesun lars': './assets/imgs/Beru-Whitesun-lars.jpeg',
+  'R5-D4': './assets/imgs/R5-D4.jpg'
+}
+
+const song = new Audio(`./assets/musics/Star-Wars.mp3`)
+
+
+
+
+
 
 
 const BASE_URL = "https://swapi.dev/api/"
@@ -22,7 +39,7 @@ function renderCharacters(hero){
     item.classList.add('item')
     items.appendChild(item)
     item.innerHTML = `
-    <img class="info__img" src="./assets/person1.jpg" alt="">
+    <img class="info__img" src=${charactersImages[name] || './assets/imgs/person1.jpg'}   alt="">
     <p class="name">Name: ${name}</p>
     <p class="birth">Birth Year: ${birth_year}</p>
     <p class="gender">Gender: ${gender}</p>
@@ -45,6 +62,9 @@ async function getCharacters(characters){
 
 
 async function getInfo(e){
+  if(confirm("Чи не будете ви проти прослухати культовий саундтрек?")){
+    song.play()
+  }
   const item = document.querySelector('.item')
   if(typeof item !== undefined){
     items.innerHTML = ``
