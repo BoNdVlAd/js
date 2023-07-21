@@ -2,12 +2,10 @@
   font-family: 'StarWars';
   src: URL('../assets/fonts/starjedi/Starjhol.ttf') format('truetype');
 }
+
 li{
   list-style: none;
 }
-
-
-
 
 *{
   margin: 0;
@@ -33,7 +31,6 @@ body{
   user-select: none;
 }
 
-
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -47,13 +44,7 @@ body{
   background-color: transparent;
   box-shadow: 10px 5px 30px #838F7E;
   padding: 10px 30px;
-  /* perspective: 200px; */
   backdrop-filter: blur(15px);
-  
-}
-
-.search{
-  /* transform: rotateX(7deg); */
 }
 
 .yellow__btn{
@@ -79,6 +70,7 @@ body{
   grid-template-rows: repeat(1, 1fr);
   gap: 20px;
 }
+
 .item{
   border: 1px solid yellow;
   padding: 5px;
@@ -86,7 +78,6 @@ body{
   display: grid;
   grid-template-rows: 185px auto;
   border-radius: 20px;
-  
 }
 
 .info__img{
@@ -94,4 +85,13 @@ body{
   max-width: 185px;
   max-height: 185px;
   margin: 0px auto;
+}
+
+.planets{
+  height: 320px;
+  padding: 0px 20px;
+}
+
+.planets__items{
+  height: 260px;
 }
